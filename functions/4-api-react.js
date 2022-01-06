@@ -12,9 +12,9 @@ try {
  const {records} = await airtable.list()
  const products = records.map((product) => {
   const {id} = product;
-  const {name,images,price,featured,colors,company,description,category,fuel,gear,registration} = product.fields
+  const {name,images,price,featured,colors,company,description,category,fuel,gear,registration,km,years} = product.fields
   const image = images[0].url
-  return {id,name,image,price,featured,colors,company,description,category,fuel,gear,registration}
+  return {id,name,image,price,featured,colors,company,description,category,fuel,gear,registration,km,years}
  })
   return {
 headers: {
